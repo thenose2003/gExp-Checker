@@ -19,7 +19,7 @@ def apicheck():
             api.write(input('API Key: '))
             api.close()
         else:
-            if requests.get("https://api.hypixel.net/skyblock/bazaar/products?key="+api).json()['success'] == True:
+            if requests.get("https://api.hypixel.net/skyblock/auctions_ended?key="+api).json()['success'] == True:
                 print('with a working key.')
                 return api
             else:
